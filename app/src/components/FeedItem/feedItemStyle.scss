@@ -1,0 +1,22 @@
+.feedItem{
+    //border: solid 1px #6a6a6a;
+    margin-top:40px;
+    margin-bottom:40px;
+    .feedItemHeader{
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        padding: 10px 20px 10px 8px;
+        font-size: 16px;
+        align-items: center;
+        background-color: rgb(67, 85, 103);
+        color: #fff;
+        font-weight: 100;
+        margin-bottom: 1px;
+        span{
+            &:first-child{
+                font-size: 20px;
+            }
+        }
+    }
+}

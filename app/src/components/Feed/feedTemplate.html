@@ -1,0 +1,8 @@
+<div class="feed">
+    <div class="feedError" ng-if="$ctrl.resourceSrv.resourceItems.length === 0">Oops... no feed items were found.</div>
+    <vf-feed-item
+        ng-if="$ctrl.resourceSrv.resourceItems.length > 0" 
+        ng-repeat="resource in $ctrl.resourceSrv.resourceItems" 
+        resource="resource">
+    </vf-feed-item>
+</div>

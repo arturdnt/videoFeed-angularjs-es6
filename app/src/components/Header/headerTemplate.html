@@ -1,0 +1,14 @@
+<header>
+    <span>{{ $ctrl.pageTitle }}</span>
+    <span class="feedItemTypesContainer">
+        <select class="feedItemTypes" 
+                ng-model="$ctrl.feedItemSelectedType"
+                ng-change="$ctrl.updateSelectedType()">
+                    <option value=''>All</option>
+                    <option ng-repeat="option in $ctrl.feedResourcesSrv.feedItemOptions" 
+                            value="{{option}}">
+                                {{option}}
+                    </option>
+        </select>
+    </span>
+</header>

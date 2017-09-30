@@ -1,0 +1,11 @@
+{
+  "name": "aa",
+  "version": "0.0.1",
+  "description": "aa",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}

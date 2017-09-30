@@ -1,0 +1,36 @@
+header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #353b40;
+    justify-content: space-between;
+    padding: 0px 5%;
+    color: #fff;
+    position: fixed;
+    width: 90%;
+    -webkit-box-shadow: 0px 10px 5px -4px rgba(0,0,0,0.19);
+    box-shadow: 0px 10px 5px -4px rgba(0,0,0,0.19);
+    z-index: 1;
+    .feedItemTypesContainer{
+        &:after{
+            position: relative;
+            right: 20px;
+            content: "\f107";
+            font-family: FontAwesome;
+            color: #6a6a6a;
+        }
+        .feedItemTypes{
+            margin-top:90px;
+            padding: 5px 30px 5px 10px;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            position: relative;
+            background: transparent;
+            border-radius: 0;
+            color: #6a6a6a;
+            font-family: Lato;
+           z-index: 1;
+        }
+    } 
+}
