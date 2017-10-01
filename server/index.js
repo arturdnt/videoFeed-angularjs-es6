@@ -4,7 +4,7 @@
 
 const express = require('express'),
       app = express(),
-      feedItems = require('./feedItems');
+      feedItems = require('./contorllers/feedItems');
 
 app.use((req, res, next)=>{
     res.header("Access-Control-Allow-Origin", "*");

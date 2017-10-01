@@ -1,4 +1,4 @@
-const mock = require('./mock')
+const mock = require('../data/mock')
 
 module.exports = {
     all: (req, res) => {
