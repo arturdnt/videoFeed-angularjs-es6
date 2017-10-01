@@ -8,8 +8,7 @@ class FeedResources {
 
     let mv = this;
     this.resourceItems = this._getItems()
-      .then(response => mv.feedItemOptions = mv._getResourceTypes(response),
-      )
+      .then(response => mv.feedItemOptions = mv._getResourceTypes(response))
   }
 
   updateFeedResoures(filterType){
