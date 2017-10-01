@@ -1,6 +1,5 @@
-trusted.$inject = ['$sceDelegateProvider'];
 
-export default function trusted($sceDelegateProvider) {
+const trusted = ($sceDelegateProvider) => {
   $sceDelegateProvider.resourceUrlWhitelist([
     'self',
     'https://www.youtube.com/**',
@@ -9,3 +8,7 @@ export default function trusted($sceDelegateProvider) {
     'http://cdn.playbuzz.com/**',
   ]);
 }
+
+trusted.$inject = ['$sceDelegateProvider'];
+
+export default trusted

@@ -16,6 +16,4 @@ app.use((req, res, next)=>{
 app.get('/:resourceType', filter);
 app.get('/', all);
 
-app.listen(8082, function () {
-    console.log("listening on port 8082");
-});
+app.listen( 8082,  () => console.log("listening on port 8082"));
