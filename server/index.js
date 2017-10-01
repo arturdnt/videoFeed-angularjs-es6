@@ -4,7 +4,7 @@
 
 const express = require('express'),
       app = express(),
-      feedItems = require('./contorllers/feedItems');
+      { all, filter } = require('./contorllers/feedItems');
 
 app.use((req, res, next)=>{
     res.header("Access-Control-Allow-Origin", "*");
@@ -13,8 +13,8 @@ app.use((req, res, next)=>{
 });
 
 
-app.get('/:resourceType', feedItems.filter);
-app.get('/', feedItems.all);
+app.get('/:resourceType', filter);
+app.get('/', all);
 
 app.listen(8082, function () {
     console.log("listening on port 8082");
