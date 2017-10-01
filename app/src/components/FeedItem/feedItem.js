@@ -8,22 +8,30 @@ class ComponentController {
 
   $onInit () {
     const vm = this;
-    this.mandatoryFileds
-      .filter((field) => {
-        if (Array.isArray(field)){
-          for (const value of field) {
-            if (vm.resource[value]){ return false;}
-          }
-          return true;
-        }
-        return !vm.resource[field]
-      })
-      .map((field)=>{
-        if (Array.isArray(field)){
-          field = field.join(' or ')
-        }
-        vm.dataMissing += `${field}, `;
-      });
+
+    const getMandatoryFieldsFilter = field =>{
+			if(Array.isArray(field)){
+				for(const value of field){
+					if(vm.resource[value]){
+						return false;
+					}
+				}
+				return true;
+			}
+			return !vm.resource[field];
+    };
+    
+    const mapToMessageReduce = (message, field) =>{
+			if(Array.isArray(field)){
+				field = field.join(' or ')
+			}
+			message += `${field}, `;
+			return message
+    };
+    
+    vm.dataMissing = this.mandatoryFileds
+      .filter(getMandatoryFieldsFilter)
+      .reduce(mapToMessageReduce, '');
 
     if (this.dataMissing){this.dataMissing = this.dataMissing.replace(/,\s*$/, "");} 
   }
