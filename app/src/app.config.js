@@ -11,4 +11,4 @@ const trusted = ($sceDelegateProvider) => {
 
 trusted.$inject = ['$sceDelegateProvider'];
 
-export default trusted
+export default trusted;

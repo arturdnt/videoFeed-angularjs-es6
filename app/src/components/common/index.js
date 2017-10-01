@@ -8,4 +8,4 @@ export default angular.module('common', [])
     .component('vfYoutube',YouTubePlayer)
     .component('vfVideo',VideoPlayer)
     .component('vfFacebook',FacebookPlayer)
-    .name
+    .name;
