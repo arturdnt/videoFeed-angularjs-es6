@@ -29,7 +29,7 @@ class ComponentController {
 			return message
     };
     
-    vm.dataMissing = this.mandatoryFileds
+    vm.dataMissing = vm.mandatoryFileds
       .filter(getMandatoryFieldsFilter)
       .reduce(mapToMessageReduce, '');
 
