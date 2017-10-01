@@ -8,17 +8,19 @@ class FeedResources {
 
     let mv = this;
     this.resourceItems = this._getItems()
-      .then(function successCallback(response) {
-        mv.feedItemOptions = mv._getResourceTypes();
-      });
+      .then(response => mv.feedItemOptions = mv._getResourceTypes(response),
+      )
   }
 
   updateFeedResoures(filterType){
     this._getItems(filterType);
   }
 
-  _getResourceTypes(){
-    return Array.from(new Set(this.resourceItems.map(item => item.source))); 
+  _getResourceTypes(items){
+    if (items){
+      return Array.from(new Set(items.map(item => item.source)));       
+    }
+    console.error('Could not update the type list');
   }
 
   _getItems(filter = ''){
@@ -26,11 +28,10 @@ class FeedResources {
     return this.http({
       method: 'GET',
       url: `http://localhost:8082/${filter}`
-    }).then(function successCallback(response) {
-      mv.resourceItems = response.data;
-      }, function errorCallback(err) {
-        console.error(`An error occured while fetching data : ${err}`)
-      });
+    })
+      .then(response => mv.resourceItems = response.data,
+            err => console.error(`An error occured while fetching data : ${err.data}`)
+      );
   }
 }
 
