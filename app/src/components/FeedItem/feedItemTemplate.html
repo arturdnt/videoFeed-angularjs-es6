@@ -1,14 +1,16 @@
 <div class="feedItem">
-  <div ng-if="$ctrl.dataMissing">
+  <div class="feedDataMissing" ng-if="$ctrl.dataMissing">
         There is data missing: {{ $ctrl.dataMissing }}
   </div>
-  <div class="feedItemHeader" ng-if="!$ctrl.dataMissing">
-    <span>{{$ctrl.resource.title}}</span>
-    <span>Views: {{$ctrl.resource.views}}</span>
-  </div>
-  <div class="feedItemContent">
-      <vf-youtube ng-if="$ctrl.resource.source === 'youtube'" video-id="{{$ctrl.resource.videoId}}"></vf-youtube>
-      <vf-facebook ng-if="$ctrl.resource.source === 'facebook'" video-id="{{$ctrl.resource.videoId}}"></vf-facebook>
-      <vf-video ng-if="$ctrl.resource.source === 'url'" url="{{$ctrl.resource.url}}"></vf-video>
+  <div ng-if="!$ctrl.dataMissing">
+    <div class="feedItemHeader" >
+      <span>{{$ctrl.resource.title}}</span>
+      <span>Views: {{$ctrl.resource.views}}</span>
+    </div>
+    <div class="feedItemContent">
+        <vf-youtube ng-if="$ctrl.resource.source === 'youtube'" video-id="{{$ctrl.resource.videoId}}"></vf-youtube>
+        <vf-facebook ng-if="$ctrl.resource.source === 'facebook'" video-id="{{$ctrl.resource.videoId}}"></vf-facebook>
+        <vf-video ng-if="$ctrl.resource.source === 'url'" url="{{$ctrl.resource.url}}"></vf-video>
+    </div>
   </div>
 </div>

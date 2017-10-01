@@ -2,6 +2,13 @@
     //border: solid 1px #6a6a6a;
     margin-top:40px;
     margin-bottom:40px;
+    .feedDataMissing{
+        min-height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #d4e7eb;
+    }
     .feedItemHeader{
         display: flex;
         height: 40px;
