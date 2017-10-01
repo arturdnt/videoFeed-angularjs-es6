@@ -1,5 +1,5 @@
-import template from './FacebookPlayerTemplate.html'
-import {ComponentController} from './FacebookPlayerComponent'
+import template from './FacebookPlayer.html'
+import {ComponentController} from './FacebookPlayer'
 const bindings = {
   videoId: '@',
 }

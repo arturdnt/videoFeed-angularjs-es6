@@ -1,5 +1,5 @@
-import template from './YouTubePlayerTemplate.html'
-import {ComponentController} from './YouTubePlayerComponent'
+import template from './YouTubePlayer.html'
+import {ComponentController} from './YouTubePlayer'
 const bindings = {
   videoId: '@',
 }

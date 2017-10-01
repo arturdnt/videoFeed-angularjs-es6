@@ -1,5 +1,5 @@
-import template from './VideoPlayerTemplate.html'
-import {ComponentController} from './VideoPlayerComponent'
+import template from './VideoPlayer.html'
+import {ComponentController} from './VideoPlayer'
 const bindings = {
   url: '@',
 }

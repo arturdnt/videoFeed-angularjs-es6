@@ -7,12 +7,11 @@ class ComponentController {
   }
 
   $onInit () {
-    let datamissingStr;
-    let vm = this;
+    const vm = this;
     this.mandatoryFileds
       .filter((field) => {
         if (Array.isArray(field)){
-          for (var value of field) {
+          for (const value of field) {
             if (vm.resource[value]){ return false;}
           }
           return true;

@@ -1,6 +1,6 @@
-import template from './feedItemTemplate.html'
-import feedStyle from './feedItemStyle.scss'
-import {ComponentController} from './feedItemComponent'
+import template from './feedItem.html'
+import feedStyle from './feedItem.scss'
+import {ComponentController} from './feedItem'
 
 const bindings = {
   resource: '<',

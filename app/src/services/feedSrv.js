@@ -5,8 +5,7 @@ class FeedResources {
     this.resourceItems = [];
     this.feedItemOptions = [];
     this.http = $http;
-
-    let mv = this;
+    const mv = this;
     this.resourceItems = this._getItems()
       .then(response => mv.feedItemOptions = mv._getResourceTypes(response))
   }
@@ -23,7 +22,7 @@ class FeedResources {
   }
 
   _getItems(filter = ''){
-    let mv = this;
+    const mv = this;
     return this.http({
       method: 'GET',
       url: `http://localhost:8082/${filter}`

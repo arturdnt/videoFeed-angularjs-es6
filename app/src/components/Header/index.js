@@ -1,6 +1,6 @@
-import template from './headerTemplate.html'
-import headerStyle from './headerStyle.scss'
-import {ComponentController} from './headerComponent'
+import template from './header.html'
+import headerStyle from './header.scss'
+import {ComponentController} from './header'
 const bindings = {
   pageTitle: '@',
 }
