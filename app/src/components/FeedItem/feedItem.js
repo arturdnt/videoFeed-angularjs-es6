@@ -33,7 +33,7 @@ class ComponentController {
       .filter(getMandatoryFieldsFilter)
       .reduce(mapToMessageReduce, '');
 
-    if (this.dataMissing){this.dataMissing = this.dataMissing.replace(/,\s*$/, "");} 
+    if (vm.dataMissing){vm.dataMissing = vm.dataMissing.replace(/,\s*$/, "");} 
   }
 }
 
